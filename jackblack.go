@@ -48,7 +48,7 @@ func hitungNilaiTangan(tangan [maksKartu]string, jumlah int) int {
 
 func tampilkanKartu(pemain []string, bandar []string, tunjukkanSemuaBandar bool) {
 	fmt.Println("\n" + strings.Repeat("=", 50))
-	fmt.Println("BLACKJACK")
+	fmt.Println("                  PERMAINAN BLACKJACK")
 	fmt.Println(strings.Repeat("=", 50))
 
 	fmt.Print("Bandar: ")
@@ -67,13 +67,14 @@ func tampilkanKartu(pemain []string, bandar []string, tunjukkanSemuaBandar bool)
 }
 
 func tampilkanMenu(stat Statistik) {
-	fmt.Println("\n" + strings.Repeat("=", 30))
-	fmt.Println("        BLACKJACK")
-	fmt.Println(strings.Repeat("=", 30))
+	fmt.Println("\n" + strings.Repeat("=", 40))
+	fmt.Println("           MENU BLACKJACK")
+	fmt.Println(strings.Repeat("=", 40))
 	fmt.Printf("Statistik: %d Menang | %d Kalah | %d Seri\n", stat.Menang, stat.Kalah, stat.Seri)
-	fmt.Println("1. Main Blackjack")
+	fmt.Println(strings.Repeat("-", 40))
+	fmt.Println("1. Mulai Permainan Baru")
 	fmt.Println("2. Keluar")
-	fmt.Print("Pilih: ")
+	fmt.Print("Pilih menu (1-2): ")
 }
 
 func mulaiPermainan() ([maksKartu]string, int, [maksKartu]string, int) {
@@ -151,7 +152,7 @@ func tentukanPemenang(tanganPemain [maksKartu]string, jumlahPemain int, tanganBa
 	totalBandar = hitungNilaiTangan(tanganBandar, jumlahBandar)
 
 	fmt.Println("\n" + strings.Repeat("=", 50))
-	fmt.Println("HASIL PERMAINAN")
+	fmt.Println("                   HASIL PERMAINAN")
 	fmt.Println(strings.Repeat("=", 50))
 	fmt.Printf("Total Anda: %d | Total Bandar: %d\n", totalPemain, totalBandar)
 
